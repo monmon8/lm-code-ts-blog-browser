@@ -1,4 +1,4 @@
-export const states = {
+export const states: any = {
 	MENU: "MENU",
 
 	SEND_MESSAGE: "SEND_MESSAGE",
