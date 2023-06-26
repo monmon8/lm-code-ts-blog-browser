@@ -13,11 +13,18 @@ export async function showMenu() {
 
 	const result = await prompt("What shall we do? ");
 
-	if (result === "0") return states.SEND_MESSAGE;
-	if (result === "1") return states.SHOW_POSTS;
-	if (result === "2") return states.SHOW_USERS;
-	if (result === "3") return states.BROWSE_POSTS;
-	if (result === "4") return states.ADD_USER;
-
-	return states.UNKNOWN;
+	switch (result) {
+		case "0":
+			return states.SEND_MESSAGE;
+		case "1":
+			return states.SHOW_POSTS;
+		case "2":
+			return states.SHOW_USERS;
+		case "3":
+			return states.BROWSE_POSTS;
+		case "4":
+			return states.ADD_USER;
+		default:
+			return states.UNKNOWN;
+	}
 }
