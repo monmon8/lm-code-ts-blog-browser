@@ -1,4 +1,4 @@
-import { states } from "./states.mjs";
+import { states } from "./states";
 
 export class State {
 	#state = states.MENU;
@@ -7,7 +7,7 @@ export class State {
 		return this.#state;
 	}
 
-	set(newState) {
+	set(newState: any) {
 		this.#state = newState;
 	}
 }

@@ -1,9 +1,10 @@
-import { sendMessageToServer } from "../../../api/send_message_to_server.mjs";
-import { states } from "../../../states/states.mjs";
-import { clear, print, printNewLine, prompt } from "../../../ui/console.mjs";
+import { json } from "express";
+import { sendMessageToServer } from "../../../api/send_message_to_server";
+import { states } from "../../../states/states";
+import { clear, print, printNewLine, prompt } from "../../../ui/console";
 
 export async function sendMessage() {
-	clear();
+	clear(json);
 
 	const message = await prompt("What message shall we send? ");
 
